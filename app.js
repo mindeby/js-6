@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const { data } = require('./data.json');
+const { projects } = data;
 
 const app = express();
 
@@ -11,11 +13,29 @@ app.use('/static', express.static('public'));
 
 app.set('view engine', 'pug');
 
-const mainRoutes = require('./routes');
-const projectRoutes = require('./routes/projects');
+app.get('/', (req, res) => {
+  res.render('index');
+  res.locals = projects;
+  console.log(res.locals)
+});
 
-app.use(mainRoutes);
-app.use('/projects', projectRoutes);
+app.get('/project/:id', (req, res) => {
+  const { id } = req.params;
+  const title = projects[id].project_name;
+  const description = projects[id].description;
+  const technologies = projects[id].technologies;
+  const templateData = { title, description, technologies};
+  console.log(templateData)
+  res.render('project', templateData);
+  //res.render('project');
+  //const { id } = req.params;
+
+  //res.redirect(`/projects/${id}`);
+});
+
+app.get('/about', (req, res) => {
+    res.render('about');
+});
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
@@ -26,7 +46,7 @@ app.use((req, res, next) => {
 app.use((err, req, res, next)=>{
   res.locals.error = err;
   res.status(err.status);
-  res.render('error');
+  //res.render('error');
 });
 
 app.listen(3000, () => {
