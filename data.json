@@ -8,7 +8,7 @@
                 "technologies": ["HTML","CSS","JS"],
                 "live_link": "https://randomquotes-project1.netlify.com",
                 "github_link": "https://github.com/mindeby/js-1",
-                "image_urls": ["images/proj1.1.png","images/proj1.2.png","images/proj1.3.png"]
+                "image_urls": ["/static/images/proj1.1.png","/static/images/proj1.2.png","/static/images/proj1.3.png"]
             },
             {
               "id": "2",
@@ -17,7 +17,7 @@
               "technologies": ["HTML","CSS","JS"],
               "live_link": "https://paginationandfiltering-project2.netlify.com",
               "github_link": "https://github.com/mindeby/js-2",
-              "image_urls": ["images/proj2.1.png","images/proj2.2.png","images/proj2.3.png"]
+              "image_urls": ["/static/images/proj2.1.png","/static/images/proj2.2.png","/static/images/proj2.3.png"]
             },
             {
               "id": "3",
@@ -26,7 +26,7 @@
               "technologies": ["HTML","CSS","JS"],
               "live_link": "https://form-val.netlify.com",
               "github_link": "https://github.com/mindeby/js-3",
-              "image_urls": ["images/proj3.1.png","images/proj3.2.png","images/proj3.3.png"]
+              "image_urls": ["/static/images/proj3.1.png","/static/images/proj3.2.png","/static/images/proj3.3.png"]
             },
             {
               "id": "4",
@@ -35,7 +35,7 @@
               "technologies": ["HTML","CSS","JS"],
               "live_link": "https://gameofthronesgameshow.netlify.com",
               "github_link": "https://github.com/mindeby/js-4",
-              "image_urls": ["images/proj4.1.png","images/proj4.2.png","images/proj4.3.png"]
+              "image_urls": ["/static/images/proj4.1.png","/static/images/proj4.2.png","/static/images/proj4.3.png"]
             },
             {
               "id": "5",
@@ -44,7 +44,7 @@
               "technologies": ["HTML","CSS","JS"],
               "live_link": "https://employee-directory.netlify.com",
               "github_link": "https://github.com/mindeby/js-5",
-              "image_urls": ["images/proj5.1.png","images/proj5.2.png","images/proj5.3.png"]
+              "image_urls": ["/static/images/proj5.1.png","/static/images/proj5.2.png","/static/images/proj5.3.png"]
             }
         ]
     }
