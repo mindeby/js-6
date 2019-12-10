@@ -14,9 +14,10 @@ app.use('/static', express.static('public'));
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.render('index');
-  res.locals = projects;
-  console.log(res.locals)
+  //res.locals = projects;
+  //const image = res.locals.image_urls[0];
+  const templateData = { projects };
+  return res.render('index', templateData);
 });
 
 app.get('/project/:id', (req, res) => {
@@ -28,12 +29,7 @@ app.get('/project/:id', (req, res) => {
   const github = projects[id].github_link;
   const images = projects[id].image_urls;
   const templateData = { title, description, technologies, live, github, images};
-  console.log(templateData)
   res.render('project', templateData);
-  //res.render('project');
-  //const { id } = req.params;
-
-  //res.redirect(`/projects/${id}`);
 });
 
 app.get('/about', (req, res) => {
