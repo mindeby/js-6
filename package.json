@@ -1,0 +1,27 @@
+{
+  "name": "js-6",
+  "version": "1.0.0",
+  "description": "Static Node.js and Express Site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindeby/js-6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mindeby/js-6/issues"
+  },
+  "homepage": "https://github.com/mindeby/js-6#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {}
+}
