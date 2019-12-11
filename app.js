@@ -1,13 +1,9 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 const { data } = require('./data.json');
+
 const { projects } = data;
 
 const app = express();
-
-app.use(bodyParser.urlencoded({ extended : false }));
-app.use(cookieParser());
 
 app.use('/static', express.static('public'));
 
@@ -29,14 +25,14 @@ app.get('/project/:id', (req, res) => {
   const github = projects[id].github_link;
   const images = projects[id].image_urls;
   const templateData = { title, description, technologies, live, github, images};
-  res.render('project', templateData);
+  return res.render('project', templateData);
 });
 
 app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.use((req, res, next) => {
+app.use((req, res, next) => { //after all the other routes because if none were activated it means he didn't found the requested route
   const err = new Error('Not Found');
   err.status = 404;
   next(err);
@@ -45,7 +41,7 @@ app.use((req, res, next) => {
 app.use((err, req, res, next)=>{
   res.locals.error = err;
   res.status(err.status);
-  //res.render('error');
+  res.render('error');
 });
 
 app.listen(3000, () => {
