@@ -5,15 +5,17 @@ const { projects } = data;
 
 const app = express();
 
-app.use('/static', express.static('public'));
-
 app.set('view engine', 'pug');
 
+app.use('/static', express.static('public'));
+
 app.get('/', (req, res) => {
-  //res.locals = projects;
-  //const image = res.locals.image_urls[0];
-  const templateData = { projects };
-  return res.render('index', templateData);
+  res.locals = { projects };
+  return res.render('index', res.locals);
+});
+
+app.get('/about', (req, res) => {
+  return res.render('about');
 });
 
 app.get('/project/:id', (req, res) => {
@@ -28,13 +30,11 @@ app.get('/project/:id', (req, res) => {
   return res.render('project', templateData);
 });
 
-app.get('/about', (req, res) => {
-    res.render('about');
-});
 
 app.use((req, res, next) => { //after all the other routes because if none were activated it means he didn't found the requested route
   const err = new Error('Not Found');
   err.status = 404;
+  console.error("Ups. We can't seem to find the requested url")
   next(err);
 });
 

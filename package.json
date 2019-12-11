@@ -21,6 +21,7 @@
   "homepage": "https://github.com/mindeby/js-6#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "path-parse": "^1.0.6",
     "pug": "^2.0.4"
   },
   "devDependencies": {}
