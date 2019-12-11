@@ -41,7 +41,7 @@
               "id": "4",
               "project_name": "Employee Directory",
               "description": "Fetching employee data with Public API Requests ",
-              "technologies": ["HTML","CSS","JS"],
+              "technologies": ["HTML","CSS","JS", "JQuery"],
               "live_link": "https://employee-directory.netlify.com",
               "github_link": "https://github.com/mindeby/js-5",
               "image_urls": ["/static/images/proj5.1.png","/static/images/proj5.2.png","/static/images/proj5.3.png"]
