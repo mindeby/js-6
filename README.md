@@ -1,5 +1,11 @@
 # js-6
- Static Node.js and Express Site
+
+Project 6 on the Full Stack JavaScript Course from Treehouse.
+It consists of a portfolio of previously built projects in this course using express.js.
+Run project after installing dependencies with npm start.
+
+
+Static Node.js and Express Site
 
 CSS changes:
 
@@ -10,6 +16,7 @@ CSS changes:
  h1,h2,h3,h4,h5,p{
    font-family: 'Open Sans', sans-serif;
  }
+
 
  .thumbnail{
    box-shadow: 13px 10px 23px -9px rgba(0,0,0,0.75);
